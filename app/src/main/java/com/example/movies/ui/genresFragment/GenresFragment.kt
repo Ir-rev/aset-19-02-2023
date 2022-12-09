@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.movies.databinding.GenresFragmentBinding
 import com.example.movies.ui.ClassForTest
 
 class GenresFragment : Fragment() {
     private lateinit var binding: GenresFragmentBinding
     private lateinit var viewModel: GenresFragmentViewModel
+//    private lateinit var layoutManager: GridLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,11 @@ class GenresFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val genresRV = binding.genresRv
+        genresRV.layoutManager = GridLayoutManager(requireContext(), 2)
+
+
+
 //        binding.movieInfoBtn.setOnClickListener {
 //            findNavController().navigate(GenresFragmentDirections.actionGenresFragmentToMovieInfoFragment(
 //                ClassForTest(binding.moviesHeader.text.toString())
@@ -37,11 +44,13 @@ class GenresFragment : Fragment() {
 //        }
 //    }
         binding.movieInfoBtn.setOnClickListener {
-            findNavController().navigate(GenresFragmentDirections.actionGenresFragmentToMovieInfoFragment(
-                ClassForTest(
-                    binding.moviesHeader.text.toString()
+            findNavController().navigate(
+                GenresFragmentDirections.actionGenresFragmentToMovieInfoFragment(
+                    ClassForTest(
+                        binding.moviesHeader.text.toString()
+                    )
                 )
-            ))
+            )
         }
     }
 
