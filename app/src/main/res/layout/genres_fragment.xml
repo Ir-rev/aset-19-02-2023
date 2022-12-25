@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <TextView
-            android:id="@+id/genres_rv"
+            android:id="@+id/genres_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -32,13 +32,13 @@
             app:layout_constraintTop_toBottomOf="@+id/movies_header"></TextView>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/genres_tab"
+            android:id="@+id/genres_rv"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/genres_rv" />
+            app:layout_constraintTop_toBottomOf="@+id/genres_header" />
 
         <TextView
             android:id="@+id/movies_tv"
@@ -49,7 +49,7 @@
             android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/genres_tab"></TextView>
+            app:layout_constraintTop_toBottomOf="@+id/genres_rv"></TextView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/movies_rv"

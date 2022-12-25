@@ -1,5 +1,6 @@
 package com.example.movies.rest
 
+import com.example.movies.response.Film
 import com.example.movies.response.FilmsList
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -18,6 +19,10 @@ class MoviesRepository {
 
     fun getFilmsList(): Call<FilmsList> {
         return api.getFilmsList()
+    }
+
+    fun getFilm(): Call<Film> {
+        return api.getFilm()
     }
 
 }

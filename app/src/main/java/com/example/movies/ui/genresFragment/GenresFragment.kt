@@ -14,7 +14,6 @@ import com.example.movies.ui.ClassForTest
 class GenresFragment : Fragment() {
     private lateinit var binding: GenresFragmentBinding
     private lateinit var viewModel: GenresFragmentViewModel
-//    private lateinit var layoutManager: GridLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
