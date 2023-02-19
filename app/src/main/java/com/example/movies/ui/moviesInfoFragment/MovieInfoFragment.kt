@@ -25,7 +25,6 @@ class MovieInfoFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MovieInfoFragmentViewModel::class.java)
-
     }
 
     override fun onCreateView(
@@ -40,8 +39,8 @@ class MovieInfoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.movieName.text = args.classForTest.text
-        Glide.with(this).load(BASE_URL).into(binding.movieImage)
+        binding.movieName.text = args.film.name
+        Glide.with(this).load(args.film.image_url).into(binding.movieImage)
 
     }
 }
